@@ -1104,6 +1104,8 @@ def travelplan_delete_page(request, pk):
 
     return HttpResponseRedirect('/travelplans/')
 
+
+@login_required
 def question_list_page(request):
     if request.user.is_administrator():
         stations = Station.objects.all()
